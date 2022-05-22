@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 const useTools = () =>{
     const[ tools, setTools] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/product")
+        fetch("https://limitless-cove-72486.herokuapp.com/product")
         .then(res=>res.json())
         .then(data => setTools(data))
     } ,[])

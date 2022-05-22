@@ -20,7 +20,7 @@ const Tool = ({ tool }) => {
             <small>Available Quantity: {available}</small>
           </p>
           <div class="card-actions justify-start">
-            <button class="btn btn-info">Buy Now</button>
+            <button class="btn btn-info w-full max-w-xs">Buy Now</button>
           </div>
         </div>
       </div>
