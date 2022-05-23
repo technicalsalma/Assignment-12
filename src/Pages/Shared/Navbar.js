@@ -99,6 +99,7 @@ const Navber = () => {
             />
           </svg>
         </label>
+      
       </div>
     </div>
   );

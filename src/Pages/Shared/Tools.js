@@ -4,6 +4,8 @@ import Tool from './Tool';
 
 const Tools = () => {
      const [tools, setTools] = useTools();
+       
+
     return (
       <div>
         <h1 className="text-center py-5 text-5xl font-bold">Our Product</h1>

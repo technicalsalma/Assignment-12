@@ -6,9 +6,12 @@ import About from './Pages/About/About';
 import Footer from './Pages/Shared/Footer';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/Login/SignUp';
-import Purchases from './Pages/Purchases/Purchases';
 import RequireAuth from './Pages/Login/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import MyOrder from './Pages/Dashboard/MyOrder';
+import MyProfile from './Pages/Dashboard/MyProfile';
+import AddReview from './Pages/Dashboard/AddReview';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -20,22 +23,26 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route
-            path="purchases"
+          {/* <Route
+            path="purchase/:purchaseId"
             element={
               <RequireAuth>
-                <Purchases />
+                <Purchase />
               </RequireAuth>
             }
-          />
+          /> */}
           <Route
             path="dashboard"
             element={
               <RequireAuth>
-                <Dashboard/>
+                <Dashboard />
               </RequireAuth>
             }
-          />
+          >
+            <Route index element={<MyOrder></MyOrder>}></Route>
+            <Route path="profile" element={<MyProfile />}></Route>
+            <Route path="review" element={<AddReview />}></Route>
+          </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
         </Routes>
