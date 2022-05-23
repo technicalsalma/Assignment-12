@@ -13,24 +13,23 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import AddReview from './Pages/Dashboard/AddReview';
 import Purchase from './Pages/Purchase/Purchase';
 
+
+
 function App() {
   return (
     <div>
       <Navbar></Navbar>
 
-      <div className="max-w-7xl mx-auto px-12">
+      <div className="max-w-7xl mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
-          {/* <Route
-            path="purchase/:purchaseId"
-            element={
-              <RequireAuth>
-                <Purchase />
-              </RequireAuth>
-            }
-          /> */}
+          <Route path="/purchase/:purchaseId" element={
+            <RequireAuth>
+              <Purchase></Purchase>
+            </RequireAuth>}></Route>
+       
           <Route
             path="dashboard"
             element={

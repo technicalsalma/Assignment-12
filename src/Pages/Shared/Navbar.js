@@ -23,12 +23,7 @@ const Navber = () => {
       <li>
         <Link to="/reviews">Reviews</Link>
       </li>
-      <li>
-        <Link to="/contact">Contact Us</Link>
-      </li>
-      <li>
-        <Link to="/purchases">Purchases</Link>
-      </li>
+
       {user && (
         <li>
           <Link to="/dashboard">Dashboard</Link>
@@ -43,6 +38,9 @@ const Navber = () => {
           <Link to="/login">Login</Link>
         )}
       </li>
+      <div>
+        <p className="hidden lg:block">{user && user?.displayName}</p>
+      </div>
     </>
   );
   return (
