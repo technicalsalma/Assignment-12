@@ -15,15 +15,13 @@ const Tool = ({ tool }) => {
           <img className="w-1/2" src={img} alt="Shoes" />
         </figure>
         <div class="p-5">
-          <h2 class="text-bold">Name: {name}</h2>
+          <h2 class="font-bold">Name: {name}</h2>
+          <p className="text-secondary">Price: ${price}</p>
+          <p className="text-secondary">Minimum order Quantity: {minimum}</p>
+          <p className="text-secondary">Available Quantity: {available}</p>
           <p>{description}</p>
-          <p className="text-danger">Price: ${price}</p>
-          <p>Minimum order Quantity: {minimum}</p>
-          <p>Available Quantity: {available}</p>
           <div class="card-actions justify-end">
-            <button
-              
-            >
+            <button className="btn btn-secondary transition ease-in-out delay-150 bg-secondary-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
               <Link to={"/purchase/" + _id}>Buy Now</Link>
             </button>
           </div>

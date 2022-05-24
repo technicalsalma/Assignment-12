@@ -7,8 +7,10 @@ const Tools = () => {
        
 
     return (
-      <div className='px-12'>
-        <h1 className="text-center py-5 text-5xl font-bold">Our Product</h1>
+      <div className="px-12">
+        <h1 className="text-secondary text-center py-5 text-4xl font-bold">
+          NEW PRODUCTS
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {tools.slice(0, 6).map((tool) => (
             <Tool key={tool._id} tool={tool}></Tool>

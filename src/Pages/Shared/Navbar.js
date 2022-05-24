@@ -23,31 +23,37 @@ const Navber = () => {
       <li>
         <Link to="/reviews">Reviews</Link>
       </li>
+     
 
       {user && (
-        <li>
+        <li className="hidden lg:block">
           <Link to="/dashboard">Dashboard</Link>
         </li>
       )}
       <li>
         {user ? (
-          <button className="btn btn-active btn-ghost" onClick={logout}>
+          <button className="btn btn-outline btn-secondary" onClick={logout}>
             SignOut
           </button>
         ) : (
-          <Link to="/login">Login</Link>
+          <Link className="btn btn-outline btn-secondary" to="/login">
+            Login
+          </Link>
         )}
       </li>
       <div>
-        <p className="hidden lg:block">{user && user?.displayName}</p>
+        <p className="hidden lg:block mt-3 ml-10 text-secondary">{user && user?.displayName}</p>
       </div>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 fixed">
       <div className="navbar-start">
         <div className="dropdown">
-          <label tabIndex="0" className="btn btn-ghost lg:hidden">
+          <label
+            tabIndex="0"
+            className="btn btn-outline btn-secondary lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -70,7 +76,7 @@ const Navber = () => {
             {menuItems}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">Drill Machine</a>
+        <a className="text-secondary text-2xl font-bold">Drill Machine</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">{menuItems}</ul>
@@ -97,7 +103,6 @@ const Navber = () => {
             />
           </svg>
         </label>
-      
       </div>
     </div>
   );
