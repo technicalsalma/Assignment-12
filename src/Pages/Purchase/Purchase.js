@@ -22,7 +22,7 @@ const Purchase = () => {
     const inputValue = e.target.quantity.value;
     setTotal(inputValue);
 
-    // if (inputValue < details.Minimum) {
+    // if (inputValue < details.minimum) {
     //     toast.error(Quantity Must Be )
     // }
     // else if (inputValue > details.available) {

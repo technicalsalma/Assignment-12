@@ -1,5 +1,5 @@
 import React from 'react';
-import { BeakerIcon } from "@heroicons/react/solid";
+
 
 const Summary = () => {
     return (
@@ -12,20 +12,21 @@ const Summary = () => {
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-5">
           <div className="bg-gradient-to-r from-sky-500 to-indigo-500 py-5">
-            <h1 className="text-center stat-value text-dark">72</h1>
-            <h6 className="text-center">Countries</h6>
+            
+            <h1 className="text-center stat-value text-dark">100+</h1>
+            <h6 className="text-center">customers</h6>
           </div>
           <div className="bg-gradient-to-r from-sky-500 to-indigo-500 py-5">
-            <h1 className="text-center stat-value text-dark">535+</h1>
-            <h6 className="text-center">Complete Project</h6>
+            <h1 className="text-center stat-value text-dark">120M+</h1>
+            <h6 className="text-center">Annual revenue</h6>
           </div>
           <div className="bg-gradient-to-r from-sky-500 to-indigo-500 py-5">
-            <h1 className="text-center stat-value text-dark">900+</h1>
-            <h6 className="text-center">Happy Clients</h6>
+            <h1 className="text-center stat-value text-dark">33K+</h1>
+            <h6 className="text-center">Reviews</h6>
           </div>
           <div className="bg-gradient-to-r from-sky-500 to-indigo-500 py-5">
-            <h1 className="text-center stat-value text-dark">720+</h1>
-            <h6 className="text-center">Feedbacks</h6>
+            <h1 className="text-center stat-value text-dark">50+</h1>
+            <h6 className="text-center">tools</h6>
           </div>
         </div>
       </div>
