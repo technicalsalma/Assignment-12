@@ -14,6 +14,8 @@ import AddReview from './Pages/Dashboard/AddReview';
 import Purchase from './Pages/Purchase/Purchase';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import NotFound from './Pages/Home/NotFound';
 
 
 
@@ -49,9 +51,11 @@ function App() {
             <Route path="review" element={<AddReview />}></Route>
             <Route path="makeadmin" element={<MakeAdmin />}></Route>
             <Route path="addproduct" element={<AddProduct />}></Route>
+            <Route path="manageproducts" element={<ManageProducts />}></Route>
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <Footer></Footer>

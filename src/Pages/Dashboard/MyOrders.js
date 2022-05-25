@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import {useAuthState} from 'react-firebase-hooks/auth'
 import auth from '../../firebase.init'
- 
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth)
-
 
     useEffect(() => {
       if (user) {
@@ -27,37 +25,61 @@ const MyOrders = () => {
       }
     }, [user]);
 
-
+     const handleDelete = (id) => {
+       const sure = window.confirm("Do you want to delete?");
+       if (sure) {
+         const url = `http://localhost:5000/orders/${id}`;
+         fetch(url, {
+           method: "DELETE",
+         })
+           .then((res) => res.json())
+           .then((data) => {
+             if (data.deletedCount > 0) {
+               console.log("deleted");
+               const remaining = orders.filter((order) => order._id !== id);
+               setOrders(remaining);
+             }
+           });
+       }
+     };
 
     return (
-        <div class="overflow-x-auto m-10">
-            <table class="table w-full">
-                {/* <!-- head --> */}
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        orders?.map((d, index) => <tr>
-                            <th>{index + 1}</th>
-                            <th>{d.productName}</th>
-                            <td>{d.orderQuantity}</td>
-                            <td>{'$' + d.price}</td>
-                            <td><button className='btn btn-sm'>pay</button></td>
-                            <td><button
-                                className='btn btn-sm'>Delete</button></td>
-                        </tr>)
-                    }
-                </tbody>
-            </table>
-        </div>
+      <div class="overflow-x-auto m-10">
+        <table class="table w-full">
+          {/* <!-- head --> */}
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {orders?.map((d, index) => (
+              <tr>
+                <th>{index + 1}</th>
+                <th>{d.productName}</th>
+                <td>{d.orderQuantity}</td>
+                <td>{"$" + d.price}</td>
+                <td>
+                  <button className="btn btn-sm">pay</button>
+                </td>
+                <td>
+                  <button
+                    onClick={() => handleDelete(d._id)}
+                    className="btn btn-sm"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
 };
 
