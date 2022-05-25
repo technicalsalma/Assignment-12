@@ -4,11 +4,7 @@ import notFount from '../../images/notFound/not-found.jpg'
 const NotFound = () => {
     return (
       <div>
-        <div class="avatar">
-          <div class="w-24 rounded">
-            <img src={notFount} alt=''/>
-          </div>
-        </div>
+        <img class="w-full h-1/2 rounded" src={notFount} alt="" />
       </div>
     );
 };
