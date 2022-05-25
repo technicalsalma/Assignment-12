@@ -16,14 +16,17 @@ const Phone = () => {
               </div>
             </div>
             <div className="ml-10 w-6/12">
-              <h1 class="text-5xl font-bold">Box Office News!</h1>
+              <h1 class="text-5xl font-bold">Drill Machine News!</h1>
               <p class="py-6">
                 Provident cupiditate voluptatem et in. Quaerat fugiat ut
                 assumenda excepturi exercitationem quasi. In deleniti eaque aut
                 repudiandae et a id nisi.
               </p>
-              <button class="btn btn-secondary transition ease-in-out delay-150 bg-secondary-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
-                Get Started
+              <button
+                class="btn btn-secondary transition ease-in-out delay-150 bg-secondary-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                to="/dashboard"
+              >
+                ORDER NOW
               </button>
             </div>
           </div>

@@ -10,7 +10,7 @@ const Tool = ({ tool }) => {
   // };
   
     return (
-      <div class="card w-86 bg-base-100 shadow-xl duration-[2000ms]">
+      <div class="card w-86 bg-base-100 drop-shadow-2xl duration-[2000ms]">
         <figure>
           <img className="w-1/2" src={img} alt="Shoes" />
         </figure>

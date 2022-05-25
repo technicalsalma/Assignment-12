@@ -6,6 +6,9 @@ module.exports = {
         0: "0ms",
         2000: "2000ms",
       },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
+      },
     },
   },
   plugins: [require("daisyui")],
