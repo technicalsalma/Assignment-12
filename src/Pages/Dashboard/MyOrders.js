@@ -17,7 +17,7 @@ const MyOrders = () => {
           },
         })
           .then((res) => {
-            console.log("res", res);
+            // console.log("res", res);
             return res.json();
           })
           .then((data) => {
@@ -27,18 +27,7 @@ const MyOrders = () => {
       }
     }, [user]);
 
-//    useEffect(() => {
-//      if (user) {
-//        fetch(`http://localhost:5000/orders?email=${user.email}`, {
-//          method: "GET",
-//          headers: {
-//            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-//          },
-//        })
-//          .then((res) => res.json())
-//          .then((data) => setOrders(data));
-//      }
-//    }, [user]);
+
 
     return (
         <div class="overflow-x-auto m-10">

@@ -13,6 +13,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import AddReview from './Pages/Dashboard/AddReview';
 import Purchase from './Pages/Purchase/Purchase';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 
 
@@ -26,11 +27,15 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="/purchase/:purchaseId" element={
-            <RequireAuth>
-              <Purchase></Purchase>
-            </RequireAuth>}></Route>
-       
+          <Route
+            path="/purchase/:purchaseId"
+            element={
+              <RequireAuth>
+                <Purchase></Purchase>
+              </RequireAuth>
+            }
+          ></Route>
+
           <Route
             path="dashboard"
             element={
@@ -43,6 +48,7 @@ function App() {
             <Route path="profile" element={<MyProfile />}></Route>
             <Route path="review" element={<AddReview />}></Route>
             <Route path="makeadmin" element={<MakeAdmin />}></Route>
+            <Route path="addproduct" element={<AddProduct />}></Route>
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />

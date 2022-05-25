@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading'
 import UserRow from '../Dashboard/UserRow'
 
 const MakeAdmin = () => {
-    const { data: users,isLoading } = useQuery("users", () =>
+    const { data: users,isLoading, refetch } = useQuery("users", () =>
       fetch("http://localhost:5000/user").then((res) => res.json())
     );
     if(isLoading){
@@ -30,6 +30,7 @@ const MakeAdmin = () => {
          users.map(user => <UserRow
          key={user._id}
          user={user}
+         refetch={refetch}
          ></UserRow>)
      }
 
