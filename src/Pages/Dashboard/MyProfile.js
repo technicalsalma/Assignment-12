@@ -25,7 +25,7 @@ const MyProfile = () => {
 
           <div className="flex-auto w-2/5 text-center items-center lg:mt-20">
             <button className="btn btn-sm">
-              <Link to="updateprofile">Update Your Profile</Link>
+              <Link to="dashboard/updateprofile">Update Your Profile</Link>
             </button>
           </div>
         </div>

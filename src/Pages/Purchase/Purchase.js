@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import PurchaseModal from "./PurchaseModal";
+
 
 const Purchase = () => {
   const { purchaseId } = useParams();
@@ -22,22 +24,18 @@ const Purchase = () => {
     const inputValue = e.target.quantity.value;
     setTotal(inputValue);
 
-    // if (inputValue < details.minimum) {
-    //     toast.error(Quantity Must Be )
-    // }
-    // else if (inputValue > details.available) {
-    //     toast.error(You Can't Order More Than Stock)
-    // }
-    // else {
-    //     toast.success('Congretulation')
-    // }
+ if (parseInt(inputValue) < parseInt(purchase.minimum)) {
+   toast.error(`Quantity Must Be equal minimum`);
+ } else if (parseInt(inputValue) > parseInt(purchase.available)) {
+   toast.error(`You Can't Order More Than Stock`);
+ }
   };
 
   return (
     <div class="">
       <div class="hero-content flex-col lg:flex-row">
         <div>
-          <img className="rounded w-4/5" src={purchase.img}  alt=""/>
+          <img className="rounded w-4/5" src={purchase.img} alt="" />
         </div>
         <div>
           <h1 class="text-5xl font-bold">{purchase.name}</h1>
@@ -80,6 +78,7 @@ const Purchase = () => {
           details={purchase}
         ></PurchaseModal>
       )}
+      <Toaster />
     </div>
   );
 };

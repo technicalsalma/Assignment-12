@@ -18,6 +18,8 @@ import NotFound from './Pages/Home/NotFound';
 import Blog from './Pages/Blog/Blog';
 import MyPortfolio from './Pages/MyPortfolio';
 import Extrasection from './Pages/ExtraSection/Extrasection';
+import Payment from './Pages/Dashboard/Payment';
+import UpdateProfile from './Pages/Dashboard/UpdateProfile';
 
 
 
@@ -55,10 +57,12 @@ function App() {
             <Route path="makeadmin" element={<MakeAdmin />}></Route>
             <Route path="addproduct" element={<AddProduct />}></Route>
             <Route path="manageproducts" element={<ManageProducts />}></Route>
+            <Route path="updateprofile" element={<UpdateProfile />}></Route>
+            <Route path="payment/:id" element={<Payment />}></Route>
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
-          <Route path="myportfolio" element={< MyPortfolio/>} />
+          <Route path="myportfolio" element={<MyPortfolio />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

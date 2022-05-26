@@ -21,7 +21,7 @@ const Tool = ({ tool }) => {
           <p className="text-secondary">Available Quantity: {available}</p>
           <p>{description}</p>
           <div class="card-actions justify-end">
-            <button className="btn btn-secondary transition ease-in-out delay-150 bg-secondary-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
+            <button className="btn btn-secondary">
               <Link to={"/purchase/" + _id}>Buy Now</Link>
             </button>
           </div>
