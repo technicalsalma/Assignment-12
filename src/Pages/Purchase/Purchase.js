@@ -3,7 +3,6 @@ import toast, { Toaster } from "react-hot-toast";
 import { useParams } from "react-router-dom";
 import PurchaseModal from "./PurchaseModal";
 
-
 const Purchase = () => {
   const { purchaseId } = useParams();
   const [purchase, setPurchase] = useState({});
@@ -12,7 +11,7 @@ const Purchase = () => {
   const orderQuantity = parseInt(total);
   console.log(orderQuantity);
   useEffect(() => {
-    const url = `http://localhost:5000/product/${purchaseId}`;
+    const url = `https://limitless-cove-72486.herokuapp.com/product/${purchaseId}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -24,11 +23,11 @@ const Purchase = () => {
     const inputValue = e.target.quantity.value;
     setTotal(inputValue);
 
- if (parseInt(inputValue) < parseInt(purchase.minimum)) {
-   toast.error(`Quantity Must Be equal minimum`);
- } else if (parseInt(inputValue) > parseInt(purchase.available)) {
-   toast.error(`You Can't Order More Than Stock`);
- }
+    if (parseInt(inputValue) < parseInt(purchase.minimum)) {
+      toast.error(`Quantity Must Be equal minimum`);
+    } else if (parseInt(inputValue) > parseInt(purchase.available)) {
+      toast.error(`You Can't Order More Than Stock`);
+    }
   };
 
   return (

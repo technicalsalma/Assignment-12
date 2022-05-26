@@ -16,7 +16,7 @@ const UpdateProfile = () => {
     };
 
     console.log(updatedInformation);
-    fetch(`http://localhost:5000/users/${user?.email}`, {
+    fetch(`https://limitless-cove-72486.herokuapp.com/users/${user?.email}`, {
       method: "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,

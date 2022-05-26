@@ -13,7 +13,7 @@ const AddReview = () => {
       review: reviewValue,
       rating: rating,
     };
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://limitless-cove-72486.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

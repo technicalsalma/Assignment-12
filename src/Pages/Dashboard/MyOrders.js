@@ -9,12 +9,15 @@ const MyOrders = () => {
 
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/orders?email=${user?.email}`, {
-        method: "GET",
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      })
+      fetch(
+        `https://limitless-cove-72486.herokuapp.com/orders?email=${user?.email}`,
+        {
+          method: "GET",
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        }
+      )
         .then((res) => {
           // console.log("res", res);
           return res.json();
@@ -29,7 +32,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const sure = window.confirm("Do you want to delete?");
     if (sure) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://limitless-cove-72486.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -111,7 +114,7 @@ export default MyOrders;
 
 //     useEffect(() => {
 //       if (user) {
-//         fetch(`http://localhost:5000/orders?email=${user?.email}`, {
+//         fetch(`https://limitless-cove-72486.herokuapp.com/orders?email=${user?.email}`, {
 //           method: "GET",
 //           headers: {
 //           authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -131,7 +134,7 @@ export default MyOrders;
 //      const handleDelete = (id) => {
 //        const sure = window.confirm("Do you want to delete?");
 //        if (sure) {
-//          const url = `http://localhost:5000/orders/${id}`;
+//          const url = `https://limitless-cove-72486.herokuapp.com/orders/${id}`;
 //          fetch(url, {
 //            method: "DELETE",
 //          })

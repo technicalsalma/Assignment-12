@@ -12,7 +12,7 @@ const AddProduct = () => {
       img: e.target.img.value,
     };
 
-    fetch("http://localhost:5000/product", {
+    fetch("https://limitless-cove-72486.herokuapp.com/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

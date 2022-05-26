@@ -17,7 +17,7 @@ const PurchaseModal = ({ details, orderQuantity }) => {
       phone: e.target.number.value,
     };
     console.log(orderDetails);
-    const url = "http://localhost:5000/orders";
+    const url = "https://limitless-cove-72486.herokuapp.com/orders";
     fetch(url, {
       method: "POST",
       headers: {
