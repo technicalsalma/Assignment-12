@@ -89,6 +89,24 @@ const Blog = () => {
           later testing stages.
         </p>
       </div>
+      <div class="divider text-secondary">Fift Question</div>
+      <div className="mb-10">
+        <h2 className="text-xl text-purple-900 font-bold">
+          {" "}
+          Q.5.Why you do not set the state directly in React. For example, if
+          you have const [products, setProducts] = useState([]). Why you do not
+          set products = [...] instead, you use the setProducts
+        </h2>
+        <p>
+          We should never update the state directly because of the following
+          reasons: If you update it directly, calling the setState() afterward
+          may just replace the update you made. When you directly update the
+          state, it does not change this.state immediately. Instead, it creates
+          a pending state transition, and accessing it after calling this method
+          will only return the present value. You will lose control of the state
+          across all components.
+        </p>
+      </div>
     </div>
   );
 };
