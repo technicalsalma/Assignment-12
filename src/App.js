@@ -16,6 +16,8 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import NotFound from './Pages/Home/NotFound';
 import Blog from './Pages/Blog/Blog';
+import MyPortfolio from './Pages/MyPortfolio';
+import Extrasection from './Pages/ExtraSection/Extrasection';
 
 
 
@@ -28,7 +30,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="blog" element={<Blog/>} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="extrasection" element={<Extrasection />} />
           <Route
             path="/purchase/:purchaseId"
             element={
@@ -55,6 +58,7 @@ function App() {
           </Route>
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
+          <Route path="myportfolio" element={< MyPortfolio/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

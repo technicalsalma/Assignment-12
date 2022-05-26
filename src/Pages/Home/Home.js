@@ -5,17 +5,20 @@ import Banner from './Banner';
 import Hero from './Hero';
 import Summary from './Summary';
 import Reviews from './Reviews'
+import Extrasection from '../ExtraSection/Extrasection';
 
 
 const Home = () => {
     return (
       <div>
         <Banner></Banner>
-        <Reviews></Reviews>
         <Tools></Tools>
         <Phone></Phone>
-        <Hero></Hero>
+        <Extrasection></Extrasection>
         <Summary></Summary>
+        <Reviews></Reviews>
+
+        <Hero></Hero>
       </div>
     );
 };
