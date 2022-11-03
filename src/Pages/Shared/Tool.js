@@ -16,7 +16,7 @@ const Tool = ({ tool }) => {
         </figure>
         <div class="p-5">
           <h2 class="font-bold">Name: {name}</h2>
-          <p className="text-secondary">Price: ${price}</p>
+          <p className="text-red-900 font-bold">Price: ${price}</p>
           <p className="text-secondary">Minimum order Quantity: {minimum}</p>
           <p className="text-secondary">Available Quantity: {available}</p>
           <p>{description}</p>

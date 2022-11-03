@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const MyPortfolio = () => {
-    return (
+    return (              
       <div>
         <div class="hero min-h-screen bg-base-100">
           <div class="hero-content flex-col lg:flex-row">

@@ -31,6 +31,7 @@ module.exports = {
       "night",
       "coffee",
       "winter",
+      "red",
     ],
     extend: {
       transitionDuration: {

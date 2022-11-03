@@ -8,19 +8,19 @@ import Reviews from './Reviews'
 import Extrasection from '../ExtraSection/Extrasection';
 
 
+
 const Home = () => {
     return (
       <div>
         <Banner></Banner>
+        <Summary></Summary> 
         <Tools></Tools>
-        <Phone></Phone>
-        <Extrasection></Extrasection>
-        <Summary></Summary>
-        <Reviews></Reviews>
-
+        <Phone></Phone> 
+        <Extrasection></Extrasection> 
         <Hero></Hero>
+        <Reviews></Reviews>
       </div>
     );
-};
+}; 
 
 export default Home;
