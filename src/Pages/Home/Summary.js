@@ -3,7 +3,7 @@ import customer from '../../images/summry/customer.png';
 import rennual from '../../images/summry/rennual (1).png';
 import review from '../../images/summry/review.png';
 import feedback from '../../images/summry/rennual (2).png';
-import divider from '../../images/profile/Ozar_O2-1.png'
+
 
 
 

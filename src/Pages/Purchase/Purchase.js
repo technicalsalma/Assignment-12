@@ -11,7 +11,7 @@ const Purchase = () => {
   const orderQuantity = parseInt(total);
   console.log(orderQuantity);
   useEffect(() => {
-    const url = `https://limitless-cove-72486.herokuapp.com/product/${purchaseId}`;
+    const url = `https://drill-machine.onrender.com/product/${purchaseId}`;
 
     fetch(url)
       .then((res) => res.json())

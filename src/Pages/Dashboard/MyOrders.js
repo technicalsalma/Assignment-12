@@ -10,7 +10,7 @@ const MyOrders = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://limitless-cove-72486.herokuapp.com/orders?email=${user?.email}`,
+        `https://drill-machine.onrender.com/orders?email=${user?.email}`,
         {
           method: "GET",
           headers: {
@@ -32,7 +32,7 @@ const MyOrders = () => {
   const handleDelete = (id) => {
     const sure = window.confirm("Do you want to delete?");
     if (sure) {
-      const url = `https://limitless-cove-72486.herokuapp.com/orders/${id}`;
+      const url = `https://drill-machine.onrender.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })

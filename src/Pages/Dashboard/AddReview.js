@@ -13,7 +13,7 @@ const AddReview = () => {
       review: reviewValue,
       rating: rating,
     };
-    fetch("https://limitless-cove-72486.herokuapp.com/reviews", {
+    fetch("https://drill-machine.onrender.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

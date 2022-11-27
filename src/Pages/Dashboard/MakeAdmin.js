@@ -9,7 +9,7 @@ const MakeAdmin = () => {
     isLoading,
     refetch,
   } = useQuery("users", () =>
-    fetch("https://limitless-cove-72486.herokuapp.com/user").then((res) =>
+    fetch("https://drill-machine.onrender.com/user").then((res) =>
       res.json()
     )
   );

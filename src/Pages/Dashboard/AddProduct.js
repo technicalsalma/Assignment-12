@@ -12,7 +12,7 @@ const AddProduct = () => {
       img: e.target.img.value,
     };
 
-    fetch("https://limitless-cove-72486.herokuapp.com/product", {
+    fetch("https://drill-machine.onrender.com/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

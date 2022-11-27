@@ -6,7 +6,7 @@ import divider from '../../images/profile/Ozar_O2-1.png'
 
 const Reviews = () => {
   const { data, isLoading } = useQuery("reviews", () =>
-    fetch("https://limitless-cove-72486.herokuapp.com/reviews").then((res) =>
+    fetch("https://drill-machine.onrender.com/reviews").then((res) =>
       res.json()
     )
   );

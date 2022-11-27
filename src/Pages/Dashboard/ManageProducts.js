@@ -4,7 +4,7 @@ import Loading from "../Shared/Loading";
 
 const ManageProducts = () => {
   const { data: product, isLoading } = useQuery("orders", () =>
-    fetch("https://limitless-cove-72486.herokuapp.com/product").then((res) =>
+    fetch("https://drill-machine.onrender.com/product").then((res) =>
       res.json()
     )
   );
@@ -16,7 +16,7 @@ const ManageProducts = () => {
   const handleDelete = (id) => {
     const sure = window.confirm("Are You Sure?");
     if (sure) {
-      const url = `https://limitless-cove-72486.herokuapp.com/product/${id}`;
+      const url = `https://drill-machine.onrender.com/product/${id}`;
       fetch(url, {
         method: "DELETE",
       })
