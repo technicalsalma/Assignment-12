@@ -3,15 +3,13 @@ import banner from '../../images/banner/banner.jpg'
 
 const Hero = () => {
     return (
-      <div className="my-20">
+      <div className="mb-20">
         <div
-          // class="hero min-h-screen"
-
-          style={{
+         style={{
             backgroundImage: `url(${banner})`,
           }}
         >
-          <div class="hero-overlay bg-secondary-60"></div>
+          {/* <div class="hero-overlay bg-secondary-60"></div> */}
           <div class="hero-content text-center text-black">
             <div class="max-w-md">
               <h1 class="mb-5 text-5xl font-bold">Drill Machine</h1>

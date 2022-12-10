@@ -4,7 +4,7 @@ import profile from '../../images/drill-machine/images.jfif'
 
 const Phone = () => {
   return (
-    <div className="lg:px-24 mt-5">
+    <div className="mt-5">
       <div class="hero bg-secondary-200">
         <div class="hero-content flex-col sm:flex-row-reverse h-4/8">
           <div>

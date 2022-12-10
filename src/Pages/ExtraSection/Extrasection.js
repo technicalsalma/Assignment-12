@@ -5,11 +5,11 @@ import img3 from '../../images/cursol/img-3.jpg'
 
 const Extrasection = () => {
     return (
-      <div class="hero min-h-screen bg-base-100 px-5">
+      <div class="hero min-h-screen bg-base-100 flex justify-between">
         <div class="hero-content flex-col lg:flex-row">
           <div class="carousel w-full">
             <div id="slide1" class="carousel-item relative w-full">
-              <img src={img1} /> /
+              <img src={img1} alt=''/> 
               <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide4" class="btn btn-circle">
                   ❮

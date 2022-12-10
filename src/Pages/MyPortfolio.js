@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import my_pic from '../../src/images/profile/my-pic.jpeg'
 
 const MyPortfolio = () => {
     return (              
@@ -7,7 +8,7 @@ const MyPortfolio = () => {
         <div class="hero min-h-screen bg-base-100">
           <div class="hero-content flex-col lg:flex-row">
             <img
-              src="https://api.lorem.space/image/movie?w=260&h=400"
+              src={ my_pic }
               class="max-w-sm rounded-lg shadow-2xl p-11"
               alt=""
             />

@@ -31,8 +31,8 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-2xl">UPDATE YOUR PROFILE</h1>
+    <div className="card w-96 mx-auto bg-base-100 mt-8">
+      <h1 className="text-2xl mb-5">UPDATE YOUR PROFILE</h1>
       <form onSubmit={updateProfile} className="grid grid-cols-1 gap-2">
         <input
           type="text"

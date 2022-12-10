@@ -3,6 +3,8 @@ import customer from '../../images/summry/customer.png';
 import rennual from '../../images/summry/rennual (1).png';
 import review from '../../images/summry/review.png';
 import feedback from '../../images/summry/rennual (2).png';
+// import divider from '../../images/profile/Ozar_O2-1.png'
+
 
 
 
@@ -10,7 +12,7 @@ import feedback from '../../images/summry/rennual (2).png';
 const Summary = () => {
     return (
       <div className="mt-10">
-      <div className="text-black text-center py-7 text-4xl font-bold">Millions Business Trust Us</div>
+      <div className="text-secondary text-center py-7 text-4xl font-bold">Millions Business Trust Us</div>
       
        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-10 mb-24">
           <div className="rounded-lg p-6">
